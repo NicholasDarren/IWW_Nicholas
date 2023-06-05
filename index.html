@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supercar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark up">
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand fw-bold fs-3" href="#"><b>Supercar</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link fw-bold" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="akhir.2.html">Review</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="akhir.3.html">In Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="akhir.4.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Form -->
+    <form id="signupForm" class="d-flex">
+    <input id="usernameInput" class="form-control me-2" type="text" placeholder="Username" aria-label="Username" style="width: 120px;">
+    <input id="passwordInput" class="form-control me-2" type="password" placeholder="Password" aria-label="Password" style="width: 120px;">
+    <button id="submitButton" class="btn btn-outline-light" type="submit">Sign Up</button>
+    </form>
+
+    </div>
+  
+  </nav>
+
+  <!-- Content -->
+
+  <div class="container-lg">
+
+    <hr class="my-4">
+    <h1 class="display-4">Welcome to our Supercar Website</h1>
+    <p class="lead">Find the best Supercar based on our reviews and ratings!</p>
+    <hr class="my-4">
+    <p>We provide honest and unbiased reviews of Supercar to help you make informed decisions.</p>
+
+    <div class="text-danger text-center fw-bold fs-2"></div>
+      <div id="carousel" class="carousel caurosel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href=""><img src="super1.jpg" width="1500" height="820" class="d-block w-100" alt="..."></a>
+            </div>
+            <div class="carousel-item">
+              <a href=""><img src="super2.jpg" width="1500" height="820" class="d-block w-100" alt="..."></a>
+            </div>
+            <div class="carousel-item">
+              <a href=""><img src="super3.jpg" width="1500" height="820" class="d-block w-100" alt="..."></a>
+            </div>
+        </div> 
+    </div>
+    
+    <hr>
+    <a class="btn btn-primary btn-lg" href="akhir.2.html" role="button">Continue</a>
+    <hr>
+
+  </div>
+
+  <div class="footer text-white">
+    <div class="container">
+      <p>© 2023 Automotive Website. All rights reserved.</p>
+      <p>For any inquiries, please contact us at : info@supercar.com</p>
+      <div>
+        • Terms of Service
+      </div>
+      <div>
+        • Privacy Policy
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script>
+      
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var username = document.getElementById("usernameInput").value;
+      var password = document.getElementById("passwordInput").value;
+      var button = document.getElementById("submitButton");
+          
+      if (username.trim() !== "" && password.trim() !== "") {
+        button.textContent = "Welcome, " + username;
+        document.getElementById("usernameInput").style.display = "none";
+        document.getElementById("passwordInput").style.display = "none";
+      }
+    });
+
+  </script>
+
+</body>
+</html>
